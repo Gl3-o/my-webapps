@@ -1,17 +1,17 @@
 let tg = window.Telegram.WebApp;
 let buy = document.getElementById("buy");
-let buy_order = document.getElementById("order");
+let order = document.getElementById("order");
 
 tg.expand();
 
 
-main.addEventListener("click", () => {
+buy.addEventListener("click", () => {
     document.getElementById("main_form").style.display = "none";
     document.getElementById("buy_form").style.display = "block";
 });
 
 
-buy_order.addEventListener("click", () => {
+order.addEventListener("click", () => {
     document.getElementById("error").innerText = '';
     let name = document.getElementById('user_name').value;
     let email = document.getElementById('user_email').value;
