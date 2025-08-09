@@ -97,9 +97,9 @@
     </div>
     <form id="form">
         <h1>Оформление покупки</h1>
-        <input type='text' placeholder="Имя" id='user_name'>
-        <input type='text' placeholder="Email" id='user_email'>        
-        <input type='text' placeholder="Номер телефона" id='user_number'>
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">        
+        <input type="text" placeholder="Номер телефона" id="user_number">
         <div id="'error"></div>
         <button id="order">Оформить</button>
     </form>
@@ -112,31 +112,31 @@
 
        tg.expand();
 
-       buy.addEventListener('click', () => {
-        document.getElementById('main').style.display = 'none';
-        document.getElementById('form').style.display = 'block';
-        document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name + ' ' + tg.initDataUnsafe.user.last_name
+       buy.addEventListener("click", () => {
+        document.getElementById("main").style.display = "none";
+        document.getElementById("form").style.display = "block";
+        document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name
        });
 
 
-       order.addEventListener('click', () => {
+       order.addEventListener("click", () => {
         document.getElementById('error').style.display = '';
         let name = document.getElementById('user_name').value;
         let email = document.getElementById('user_email').value;
         let number = document.getElementById('user_number').value;
 
         if (name.length < 5) {
-            document.getElementById('error').innerText = 'Ошибка в имени';
+            document.getElementById("error").innerText = 'Ошибка в имени';
             return;
         }
 
         if (email.length < 5) {
-            document.getElementById('error').innerText = 'Ошибка в email';
+            document.getElementById("error").innerText = 'Ошибка в email';
             return;
         }
 
-        if (number.email.length < 5) {
-            document.getElementById('error').innerText = 'Ошибка в номере телефона';
+        if (number.length < 5) {
+            document.getElementById("error").innerText = 'Ошибка в номере телефона';
             return;
         }
 
