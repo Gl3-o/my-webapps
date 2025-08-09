@@ -1,14 +1,13 @@
 let tg = window.Telegram.WebApp;
-let main = document.getElementById("main_form");
-let buy_order = document.getElementById("buy_form");
+let buy = document.getElementById("buy");
+let buy_order = document.getElementById("order");
 
 tg.expand();
 
 
 main.addEventListener("click", () => {
     document.getElementById("main_form").style.display = "none";
-    document.getElementById("main_form").style.display = "block";
-    document.getElementById("buy_form").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+    document.getElementById("buy_form").style.display = "block";
 });
 
 
