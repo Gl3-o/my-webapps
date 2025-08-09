@@ -5,40 +5,29 @@
     <meta name="viewport" 
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximim-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gl3oMart</title>
+    <title>Shop</title>
 
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
-    <div id="#categories-screen" class = "screen">
-        <h1>Категории товаров</h1>
-        <div id="categories-list" class="items-container"></div>
+    <div id="main_form">
+        <h1>Онлайн магазин</h1>
+        <img src="https://smtl.ru/upload/iblock/af6/kqt74sw9fal524cqqfpjbj3nql38to63/unnamed.jpg" alt="Значок онлайн магазина">
+        <p>Онлайн-магазин — покупайте легко и быстро, не выходя из дома.</p>
+        <button id="buy">Купить сейчас</button>
     </div>
+    <form id="buy_form">
+        <h1>Оформление покупки</h1>
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">        
+        <input type="text" placeholder="Номер телефона" id="user_number">
+        <div id="error"></div>
+        <button id="order">Оформить</button>
+    </form>
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
 
-
-    <div id="items-screen" class="screen" style="display:none;">
-        <h1 id="category-title">Товары</h1>
-        <div id="items-list" class="items-container"></div>
-        <button id="back-to-categories" class="back-btn">← Назад</button>
-    </div>
-
-
-    <div id="checkout-screen" class="screen" style="display:none;">
-        <h1>Оформление заказа</h1>
-        <div id="item-info"></div>
-        <form id="checkout-form">
-            <input type="text" placeholder="Имя" id="user_name" required>
-            <input type="email" placeholder="Email" id="user_email" required>
-            <input type="tel" placeholder="Телефон" id="user_number" required>
-            <div id="error" class="error-message"></div>
-            <button type="submit" class="submit-btn">Оформить заказ</button>
-        </form>
-        <button id="back-to-items" class="back-btn">← Назад</button>
-    </div>
-
-
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
