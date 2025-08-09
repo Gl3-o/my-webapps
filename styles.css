@@ -6,140 +6,17 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #db5d5d;
-    --secondary-color: #f0f0f0;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--tg-theme-bg-color, #ffffff);
-    color: var(--tg-theme-text-color, #000000);
+    font-weight: 200;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
 }
-
-.screen {
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.items-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.category-card, .item-card {
-    background: var(--tg-theme-secondary-bg-color, #f0f0f0);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.category-card:hover, .item-card:hover {
-    transform: scale(1.03);
-}
-
-.item-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.item-price {
-    font-weight: bold;
-    color: var(--primary-color);
-    margin: 10px 0;
-}
-
-button, .submit-btn {
-    background-color: var(--tg-theme-button-color, var(--primary-color));
-    color: var(--tg-theme-button-text-color, #ffffff);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.back-btn {
-    background-color: transparent;
-    color: var(--tg-theme-text-color, #000000);
-    border: 1px solid var(--tg-theme-text-color, #000000);
-    margin-top: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.error-message {
-    color: red;
-    margin: 10px 0;
-}
-
-/* Индикатор загрузки */
-.loading {
-  text-align: center;
-  padding: 30px;
-}
-
-.spinner {
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  border-top: 4px solid var(--primary-color);
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 15px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Блок ошибки */
-.error-block {
-  text-align: center;
-  padding: 20px;
-  color: #ff3333;
-}
-
-.retry-btn {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 10px 20px;
-  margin-top: 15px;
-}
-
-.error-details {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-top: 10px;
-}
-
-
 
 /*
-Выбор категории товара
+Покупка товара
 */
-#categories {
+#main_form {
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -180,90 +57,11 @@ button:hover {
 
 
 /*
-Выбор товара из категории
-*/
-#items {
-    display: none;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-img {
-    width: 70px;
-    margin: 30px auto;
-}
-
-p {
-    width: 350px;
-    margin: 0 auto;
-}
-
-button {
-    border: 0;
-    border-radius: 5px;
-    margin-top: 50px;
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg-theme-button-text-color);
-}
-
-button:hover {
-    background: var(--tg-theme-secondary-bg-color);
-}
-
-
-/*
-Оформление товара
+Регистрация пользователя
 */
 #buy_form {
     display: none;
-    width: 100%;
-    padding: 20px;
     text-align: center;
-}
-
-h1 {
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-img {
-    width: 70px;
-    margin: 30px auto;
-}
-
-p {
-    width: 350px;
-    margin: 0 auto;
-}
-
-button {
-    border: 0;
-    border-radius: 5px;
-    margin-top: 50px;
-    height: 60px;
-    width: 200px;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 500ms ease;
-    color: var(--tg-theme-button-color);
-    background: var(--tg-theme-button-text-color);
-}
-
-button:hover {
-    background: var(--tg-theme-secondary-bg-color);
 }
 
 input {
