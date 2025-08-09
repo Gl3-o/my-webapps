@@ -7,6 +7,7 @@ tg.expand();
 
 main.addEventListener("click", () => {
     document.getElementById("main_form").style.display = "none";
+    document.getElementById("main_form").style.display = "block";
     document.getElementById("buy_form").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 });
 
