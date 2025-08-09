@@ -100,15 +100,15 @@
         <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Email" id="user_email">        
         <input type="text" placeholder="Номер телефона" id="user_number">
-        <div id="'error"></div>
+        <div id="error"></div>
         <button id="order">Оформить</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
 
     <script>
        let tg = window.Telegram.WebApp;
-       let buy = document.getElementById('buy');
-       let order = document.getElementById('order');
+       let buy = document.getElementById("buy");
+       let order = document.getElementById("order");
 
        tg.expand();
 
@@ -120,7 +120,7 @@
 
 
        order.addEventListener("click", () => {
-        document.getElementById('error').style.display = '';
+        document.getElementById("error").innerText = '';
         let name = document.getElementById('user_name').value;
         let email = document.getElementById('user_email').value;
         let number = document.getElementById('user_number').value;
